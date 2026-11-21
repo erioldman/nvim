@@ -9,6 +9,13 @@ return {
         },
         lazy = false,
         opts = {},
+        init = function()
+            vim.api.nvim_create_autocmd("VimEnter", {
+                callback = function()
+                    require("neo-tree.command").execute({ action = "show" })
+                end,
+            })
+        end,
     },
 }
 

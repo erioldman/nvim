@@ -87,7 +87,8 @@ No predefined distribution or plugin collection is used. Every plugin is explici
 - Enables the Ruff language server.
 
 **`lua/plugins/neo-tree.lua`**
-- Adds the Neo-tree file explorer, loaded at startup and toggled with `:Neotree`.
+- Adds the Neo-tree file explorer, loaded at startup and opened automatically when Neovim starts.
+- Toggled with `:Neotree`.
 
 **`lua/plugins/`**
 - Contains individual plugin specifications for Blink, LSP configuration, Mason, and Neo-tree.

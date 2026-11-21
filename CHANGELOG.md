@@ -4,6 +4,12 @@ All notable changes to this Neovim configuration will be documented in this file
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.2.1] - 2026-11-21
+
+### Changed
+
+- Neo-tree now opens automatically when Neovim starts via a `VimEnter` autocmd.
+
 ## [0.2.0] - 2026-11-21
 
 ### Added
