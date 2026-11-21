@@ -41,6 +41,7 @@ No predefined distribution or plugin collection is used. Every plugin is explici
 | [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) | LSP configurations |
 | [mason.nvim](https://github.com/mason-org/mason.nvim) | External tool installer |
 | [mason-lspconfig.nvim](https://github.com/mason-org/mason-lspconfig.nvim) | Mason and LSP integration |
+| [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim) | File explorer tree |
 
 ### Language Servers and Tools
 
@@ -63,7 +64,8 @@ No predefined distribution or plugin collection is used. Every plugin is explici
 │   └── plugins/
 │       ├── blink.lua
 │       ├── lsp.lua
-│       └── mason.lua
+│       ├── mason.lua
+│       └── neo-tree.lua
 └── .gitignore
 ```
 
@@ -84,8 +86,11 @@ No predefined distribution or plugin collection is used. Every plugin is explici
 - Configures LSP capabilities using Blink's completion capabilities.
 - Enables the Ruff language server.
 
+**`lua/plugins/neo-tree.lua`**
+- Adds the Neo-tree file explorer, loaded at startup and toggled with `:Neotree`.
+
 **`lua/plugins/`**
-- Contains individual plugin specifications for Blink, LSP configuration, and Mason.
+- Contains individual plugin specifications for Blink, LSP configuration, Mason, and Neo-tree.
 
 **`lazy-lock.json`**
 - Records exact plugin versions and commits for reproducible installations.
