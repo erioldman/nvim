@@ -72,6 +72,7 @@ No predefined distribution or plugin collection is used. Every plugin is explici
 ### Configuration Files
 
 **`init.lua`**
+- Sets space as the leader key (`mapleader`).
 - Bootstraps lazy.nvim.
 - Loads editor options, keymaps, and LSP configuration.
 - Initializes the plugin manager.
@@ -81,6 +82,7 @@ No predefined distribution or plugin collection is used. Every plugin is explici
 
 **`lua/config/keymaps.lua`**
 - Maps `Esc` in Normal mode to clear search highlights (`:nohlsearch`).
+- Maps `<leader>e` to toggle (hide/unhide) the Neo-tree window.
 
 **`lua/config/lsp.lua`**
 - Configures LSP capabilities using Blink's completion capabilities.
@@ -88,7 +90,10 @@ No predefined distribution or plugin collection is used. Every plugin is explici
 
 **`lua/plugins/neo-tree.lua`**
 - Adds the Neo-tree file explorer, loaded at startup and opened automatically when Neovim starts.
-- Toggled with `:Neotree`.
+- Roots the tree at the launched file's directory (current directory when no file is given) and reveals the file in the tree.
+- Shows hidden (dot)files.
+- `Space` in the tree opens the selected file or toggles the directory under the cursor (with `nowait`, so it fires instantly).
+- Toggled with `<leader>e` or `:Neotree`.
 
 **`lua/plugins/`**
 - Contains individual plugin specifications for Blink, LSP configuration, Mason, and Neo-tree.

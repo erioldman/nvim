@@ -4,6 +4,19 @@ All notable changes to this Neovim configuration will be documented in this file
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.3.0] - 2026-11-22
+
+### Added
+
+- Space as the leader key (`mapleader`).
+- `<leader>e` keymap toggling (hiding/unhiding) the Neo-tree window.
+- `Space` in the Neo-tree window opens the selected file or toggles the directory under the cursor (`nowait`, so it responds instantly).
+- Hidden (dot)files are always shown in Neo-tree.
+
+### Changed
+
+- Neo-tree roots itself at the launched file's directory when Neovim is started with a file (current directory otherwise) and reveals the opened file in the tree.
+
 ## [0.2.1] - 2026-11-21
 
 ### Changed
