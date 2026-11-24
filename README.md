@@ -79,6 +79,8 @@ No predefined distribution or plugin collection is used. Every plugin is explici
 
 **`lua/config/options.lua`**
 - Uses the system clipboard for all yanks and pastes (`unnamedplus`).
+- Wraps long lines at word boundaries (`wrap`, `linebreak`).
+- Lets `h` and `l` cross line boundaries (`whichwrap`).
 
 **`lua/config/keymaps.lua`**
 - Maps `Esc` in Normal mode to clear search highlights (`:nohlsearch`).
@@ -91,7 +93,7 @@ No predefined distribution or plugin collection is used. Every plugin is explici
 **`lua/plugins/neo-tree.lua`**
 - Adds the Neo-tree file explorer, loaded at startup and opened automatically when Neovim starts.
 - Roots the tree at the launched file's directory (current directory when no file is given) and reveals the file in the tree.
-- Shows hidden (dot)files.
+- Shows hidden (dot)files and gitignored files (e.g. `__pycache__`), so visibility is consistent everywhere.
 - `Space` in the tree opens the selected file or toggles the directory under the cursor (with `nowait`, so it fires instantly).
 - Toggled with `<leader>e` or `:Neotree`.
 

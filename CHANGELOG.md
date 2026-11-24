@@ -4,6 +4,16 @@ All notable changes to this Neovim configuration will be documented in this file
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [Unreleased]
+
+### Changed
+
+- Neo-tree shows gitignored files too (`hide_gitignored = false`), so items like `__pycache__` are visible consistently in root and child folders instead of being filtered by gitignore rules.
+
+### Added
+
+- Long lines wrap at word boundaries (`wrap`, `linebreak`), and `h`/`l` move across line boundaries (`whichwrap`).
+
 ## [0.3.0] - 2026-11-22
 
 ### Added
