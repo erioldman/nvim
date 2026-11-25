@@ -42,6 +42,7 @@ No predefined distribution or plugin collection is used. Every plugin is explici
 | [mason.nvim](https://github.com/mason-org/mason.nvim) | External tool installer |
 | [mason-lspconfig.nvim](https://github.com/mason-org/mason-lspconfig.nvim) | Mason and LSP integration |
 | [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim) | File explorer tree |
+| [nvim-surround](https://github.com/kylechui/nvim-surround) | Add, change, and delete surrounding pairs |
 
 ### Language Servers and Tools
 
@@ -65,7 +66,8 @@ No predefined distribution or plugin collection is used. Every plugin is explici
 │       ├── blink.lua
 │       ├── lsp.lua
 │       ├── mason.lua
-│       └── neo-tree.lua
+│       ├── neo-tree.lua
+│       └── nvim-surround.lua
 └── .gitignore
 ```
 
@@ -97,8 +99,12 @@ No predefined distribution or plugin collection is used. Every plugin is explici
 - `Space` in the tree opens the selected file or toggles the directory under the cursor (with `nowait`, so it fires instantly).
 - Toggled with `<leader>e` or `:Neotree`.
 
+**`lua/plugins/nvim-surround.lua`**
+- Adds [nvim-surround](https://github.com/kylechui/nvim-surround) with default settings, lazy-loaded on `VeryLazy`.
+- Mappings: `ys{motion}{char}` adds a surrounding pair, `cs{old}{new}` changes it, `ds{char}` deletes it.
+
 **`lua/plugins/`**
-- Contains individual plugin specifications for Blink, LSP configuration, Mason, and Neo-tree.
+- Contains individual plugin specifications for Blink, LSP configuration, Mason, Neo-tree, and nvim-surround.
 
 **`lazy-lock.json`**
 - Records exact plugin versions and commits for reproducible installations.

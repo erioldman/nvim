@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-11-25
+
+### Added
+
+- [nvim-surround](https://github.com/kylechui/nvim-surround) for adding, changing, and deleting surrounding pairs (`ys`, `cs`, `ds`), lazy-loaded on `VeryLazy` with default settings.
+
+## [0.3.1] - 2026-11-24
+
 ### Changed
 
 - Neo-tree shows gitignored files too (`hide_gitignored = false`), so items like `__pycache__` are visible consistently in root and child folders instead of being filtered by gitignore rules.
