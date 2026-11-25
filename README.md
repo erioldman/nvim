@@ -97,6 +97,9 @@ No predefined distribution or plugin collection is used. Every plugin is explici
 - Roots the tree at the launched file's directory (current directory when no file is given) and reveals the file in the tree.
 - Shows hidden (dot)files and gitignored files (e.g. `__pycache__`), so visibility is consistent everywhere.
 - `Space` in the tree opens the selected file or toggles the directory under the cursor (with `nowait`, so it fires instantly).
+- Search (`/`) jumps the cursor to the first match while typing — folders and files whose name contains the term (case-insensitive).
+- `C-n` / `C-p` cycle to the next/previous match while the search box is open, with wrap-around.
+- Enter opens the match: files open in the editor, folders expand in place; the filter is cleared, the full tree is restored, and the tree cursor is on the match, centered at or above the middle of the window.
 - Toggled with `<leader>e` or `:Neotree`.
 
 **`lua/plugins/nvim-surround.lua`**

@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-11-25
+
+### Added
+
+- Neo-tree search navigation: while typing in the search box (`/`), the cursor jumps to the first match — folders and files whose name contains the term (case-insensitive) — instead of only files.
+- `C-n` and `C-p` cycle to the next/previous match while the search box is still open (wrapping around, focus stays in the input).
+- Enter on a search match opens it: files open in the editor, folder matches expand in place. In both cases the filter is cleared, the full tree is restored, and the tree cursor is placed on the match, centered at or above the vertical middle of the window.
+
+### Fixed
+
+- Opening a search match no longer loses the tree cursor to a pending debounced filter refresh; the pending navigation is neutralized before the match is opened and revealed.
+
 ## [0.4.0] - 2026-11-25
 
 ### Added
